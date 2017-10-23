@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Event', new_event_path, class: 'btn btn-success pull-right' %>
+
+<h1>Events</h1>
+
+<div class="filters">
+  <a class="btn btn-primary" id="all-events">All events</a>
+  <a class="btn btn-primary" id="visited-events">Visited events</a>
+  <a class="btn btn-primary" id="not-visited-events">Not visited events</a>
+  <a class="btn btn-primary" id="past-events">Past events</a>
+  <a class="btn btn-primary" id="feature-events">Feature events</a>
+</div>
+
+<table id="events" data-toggle="table"></table>
