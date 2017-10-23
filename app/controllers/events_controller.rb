@@ -74,7 +74,7 @@ class EventsController < ApplicationController
   end
 
   def update_users
-    user_ids = params[:users]
+    user_ids = params[:users].present? ? params[:users] : []
     user_ids << current_user.id
     respond_to do |format|
       if @event.update_attributes(user_ids: user_ids)
